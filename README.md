@@ -1,6 +1,6 @@
-###Altschool details
-*name: akhigbe sadiq
-*student ID: ALT/SOE/BAR/026/0110
+## Altschool details
+* name: akhigbe sadiq
+* student ID: ALT/SOE/BAR/026/0110 
 
 # Weather App 
 
@@ -105,11 +105,5 @@ No additional dependencies or build tools are required.
 
 ## Author
 
-Built as a frontend JavaScript project to practice:
+Built as a end of semester project at Altschool of engineering.
 
-* API integration
-* Asynchronous JavaScript (`async/await`)
-* Error handling
-* DOM manipulation
-* Geolocation services
-* Responsive UI development
