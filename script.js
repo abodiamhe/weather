@@ -273,7 +273,16 @@ searchFormEl.addEventListener('submit', (e) => {
   getCoordinates(city)
 })
 
- 
+// using the enter key to search
+window.addEventListener('keydown', (e) => { 
+  if(e.key === "Enter") {
+    const city = cityInputEl.value.trim()
+    if(!city) return
+
+    // pass search city to get coordinate
+    getCoordinates(city)
+  }
+})
 
 // Getting the UV level from UV Index
 function getUvIndex(index) {
