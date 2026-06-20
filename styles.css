@@ -1,0 +1,215 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+body { 
+  box-sizing: border-box;
+  font-family: sans-serif;
+  line-height: 1.5; 
+  
+}
+.container {
+  display: grid;
+  grid-template-rows: 4.2rem;
+  grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 10rem)[col-end]) [center-end] minmax(1rem, 1fr)[full-end];
+  gap: 1rem;
+} 
+.form {
+  text-align: center;
+}
+#search_form button {
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  background-color: #2E86AB;
+  padding: .5rem .8rem;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+#search_form button:hover {
+  background-color: #2e86abe1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.148);
+  transform: translateY(-1.5px);
+}
+#search_form input {
+  width: 20rem;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-family: inherit;
+  color: inherit; 
+  transition: all 0.2s ease;
+  outline: none;
+}
+#search_form input:focus {
+  transform: scaleX(1.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.148);
+}
+.header { 
+  grid-column: full-start/full-end;
+  background-color: #1A3C5E;
+  color: #fff;
+  padding-left: 4rem;
+} 
+.main {
+  grid-column: col-start 2/col-start 10;
+  min-height: 15rem;
+}
+.hero {
+  min-height: 14rem;
+  background-color: #2e86abe1;
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.weather_icon {
+  font-size: 32px;
+}
+.city {
+  font-weight: 500;
+  margin-top: .2rem;
+}
+.temperature {
+  font-weight: 600;
+  font-size: 30px;
+}
+.description {
+  font-weight: 100;
+  font-size: 12px;
+  color: #ffffff92;
+}
+.stat {
+  border: 1px solid #d1d5db;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: .5rem; 
+  display: flex;
+  justify-content: space-between;  
+}
+.stat > div {
+  flex: 1;
+  text-align: center;
+}
+.stat > div:not(:last-child) {
+  border-right: 1px solid #d1d5db;
+}
+.stat_group > :first-child {
+  color: #545d65;
+  font-size: 12px;
+}
+.humidity, .wind, .uv_index {
+  font-weight: 600;
+  color: #1A3C5E;
+}
+.forecase {
+  margin-top: 1rem;
+  min-height: 15rem;
+}
+.forecase >h2 {
+    color: #545d65;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.daily_des {
+  color: #1A3C5E;
+  background-color: hsla(210, 57%, 24%, 0.02);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  border-radius: 10px;
+  border: .5px solid #d1d5db;
+  margin-top: .5rem;
+  padding: .5rem;
+  transition: all 0.2s ease;
+}
+.daily_des:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.148);
+  transform: translateY(-1.5px);
+}
+
+.daily_des > div, .daily_des > p {
+  flex: 1; 
+}
+.daily_des > :not(:first-child) {
+  text-align: center;
+}
+.daily_icon {
+  font-size: 24px;
+  color: #545d65;
+}
+.temp_min {
+  color: #545d65;
+  font-weight: 400;
+  font-size: 14px;
+}
+.error {
+  color: #ff0000a0; 
+  margin-top: .5rem;
+  font-style: italic;
+}
+footer {
+  grid-column: col-start 2/col-start 10;
+  color: #545d65;
+  font-size: .8rem;
+  margin-top: 2rem; 
+  text-align: center;
+}
+a:link, a:visited {
+  text-decoration: none;
+  color: #1A3C5E;
+  border-bottom: 1px solid currentColor;
+}
+
+/* Loader */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  margin: 1rem 0;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #3b82f6;
+  border-right-color: #38bdf8;
+  animation: spin 1s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* responsiveness */
+@media (max-width: 33.75em) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .main {
+    grid-column: center-start/center-end;
+  } 
+  footer {
+    grid-column: center-start/center-end; 
+  }
+  .header {  
+    padding-left: 1rem;
+  } 
+  #search_form input {
+    width: 100%; 
+    max-width: 70%;
+  }
+}

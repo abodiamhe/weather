@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Weather app that auto show the weather of your current location and display input you can search for the current weather over the globe along as the forecase for the weather condition for the 5 (five) days"/> 
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header"> 
+      <h1>Weather App</h1> 
+    </header>
+    <main class="main">
+      <section class="form">
+        <form id="search_form">
+          <input type="text" class="city_input">
+          <button type="submit">Search</button>
+        </form>
+        <p class="error"></p>
+      </section>
+      <section>
+        <div class="current">
+          <div class="hero">
+            <div class="current_container hidden">
+              <p class="weather_icon"></p>
+              <p class="city"></span></p>
+              <p class="temperature"></p>
+              <p class="description"></p>
+            </div>
+            <div class="loader-container hidden">
+                <div class="loader"></div>
+              <p>Loading...</p>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat_group">
+              <p>Humidity</p>
+              <p class="humidity"></p>
+            </div>
+            <div class="stat_group">
+              <p>Wind</p>
+              <p class="wind"></p>
+            </div>
+            <div class="stat_group">
+              <p>UV Index</p>
+              <p class="uv_index"></p>
+            </div>
+          </div>
+        </div>
+        <div class="forecase">
+          <h2>5-day forecast</h2>
+          <div class="daily"></div> 
+        </div>
+      </section>
+      
+    </main>
+    <footer>
+      <p class="copyright">copyright © 2026
+       <a href="http://www.abodiamhe.dev" target="_blank" rel="noopener noreferrer">abodiamhe</a>
+      </p>
+    </footer>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
