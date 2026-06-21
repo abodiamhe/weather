@@ -1,6 +1,7 @@
 ## Altschool details
 * name: akhigbe sadiq
 * student ID: ALT/SOE/BAR/026/0110 
+* site: https://abodiamhe.github.io/weather/
 
 # Weather App 
 
